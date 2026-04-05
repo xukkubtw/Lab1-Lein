@@ -1,22 +1,16 @@
-﻿using System;
+﻿using ConsoleApp.Modules;
+using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Введите первое число: ");
-        int a = int.Parse(Console.ReadLine());
+        int a = InputModule.ReadInt("Введите первое число: ");
+        int b = InputModule.ReadInt("Введите второе число: ");
 
-        Console.WriteLine("Введите второе число: ");
-        int b = int.Parse(Console.ReadLine());
-
-        while (b != 0)
+        if (ValidationModule.IsValid(a, b))
         {
-            int temp = b;
-            b = a % b;
-            a = temp;
+            ProcessingModule.FindGCD(a, b);
         }
-
-        Console.WriteLine("НОД = " + a);
     }
 }
