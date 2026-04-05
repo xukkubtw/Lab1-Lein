@@ -1,5 +1,33 @@
+# Сборка и временные папки
+
 bin/
 obj/
+*.exe
+*.dll
+*.pdb
+
+# Файлы Visual Studio и пользователя
+
+.vs/
 *.user
 *.suo
-.vs/
+*.csproj.user
+*.log
+
+# Временные и кеш-файлы
+
+*.tmp
+*.cache
+*.bak
+*.swp
+
+# Файлы репозитория, которые нужно сохранять
+
+# исходный код и модули
+!src/ConsoleApp/**/*.cs
+
+# документация и артефакты
+!README.md
+!ProjectArtifacts.md
+!ProjectProtocols.md
+!UML_Module_Diagram.png  # или другой формат диаграммы
